@@ -69,7 +69,7 @@ const List = (props) => {
   const deleteon = async (id) => {
     try {
       console.log(id);
-      const res = await Axios.delete(`http://localhost:3001/${id}`);
+      const res = await Axios.delete(`https://contakee.herokuapp.com/${id}`);
       if (res.data.success) {
         alert(res.data.msg);
       }

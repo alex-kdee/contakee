@@ -101,7 +101,7 @@ function Edit() {
   };
 
   const onsubmit = () => {
-    Axios.put(`http://localhost:3001`, {
+    Axios.put(`https://contakee.herokuapp.com/`, {
       data: {
         _id: location.state.id,
         name: state.detail,

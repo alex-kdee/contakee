@@ -93,7 +93,7 @@ function Add() {
   });
 
   const submitdata = () => {
-    Axios.post("http://localhost:3001", state)
+    Axios.post("https://contakee.herokuapp.com/", state)
       .then((response) => {
         console.log(response);
       })
@@ -107,7 +107,7 @@ function Add() {
           console.log(error);
         }
       });
-    navigate("/" );
+    navigate("/");
   };
 
   const changeHandle = (e) => {

@@ -76,7 +76,7 @@ function Home() {
     display();
   }, []);
   async function display() {
-    var file = await Axios.get("http://localhost:3001");
+    var file = await Axios.get("https://contakee.herokuapp.com/");
     seturl(file.data);
     // console.log(url);
 
