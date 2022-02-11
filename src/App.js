@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Button, makeStyles } from "@material-ui/core";
+import Home from "./components/home";
+import Add from "./components/Add";
+import Edit from "./components/edit";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+
+const useStyles = makeStyles({});
 
 function App() {
+  const classes = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.app}>
+        <Router>
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/add' element={<Add />} />
+            <Route path='/edit/:id' element={<Edit/>} />
+          </Routes>
+        </Router>
     </div>
   );
 }
